@@ -162,6 +162,7 @@ body {
           width: 100%;
           bottom: 0;
           left: 0;
+          height: fit-content;
 
           @media (min-width: 768px) {
             top: 80%;
@@ -188,11 +189,76 @@ body {
     margin-top: 50px;
     .contenedor-acerca {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 50px;
+        row-gap: 30px;
+
+        @media (min-width: 680px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1120px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
 
         .item-acerca {
             text-align: center;
+            padding: 15px;
+            position: relative;
+            cursor: pointer;
+
+            .lado {
+              position: absolute;
+              display: inline-block;
+              background-color: $rojo;
+              transition: all .5s ease;
+            }
+
+            .l1 {
+              top: 0;
+              left: 0;
+              height: 0;
+              width: 3px;
+            }
+
+            .l2 {
+              bottom: 0;
+              left: 0;
+              height: 3px;
+              width: 0;
+            }
+
+            .l3 {
+              bottom: 0;
+              right: 0;
+              height: 0;
+              width: 3px;
+            }
+
+            .l4 {
+              top: 0;
+              left: 0;
+              height: 3px;
+              width: 0;
+            }
+
+            &:hover {
+              .l1 {
+                height: 100%;
+              }
+
+              .l2 {
+                width: 100%;
+              }
+
+              .l3 {
+                height: 100%;
+              }
+
+              .l4 {
+                width: 100%;
+              }
+            }
 
             i {
                 font-size: 1.2rem;
@@ -207,6 +273,51 @@ body {
                 line-height: 1.5;
             }
         }
+    }
+  }
+
+  .footer-sitio {
+    margin-top: 50px;
+    background-color: $negro;
+    padding: 50px 30px;
+
+    .contenido-footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .tienda-pincha {
+        img {
+          width: 65%;
+
+          @media (min-width: 768px) {
+            width: 50%;
+          }
+        }
+      }
+
+      .redes {
+        margin: 0 auto;
+        a {
+          display: block;
+          text-align: left;
+          margin-bottom: 10px;
+          transition: all .3s ease;
+
+          &:hover {
+            color: $rojo;
+          }
+
+          &:hover i {
+            transform: scale(1.2);
+          }
+
+          i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+          }
+        }
+      }
     }
   }
 }
