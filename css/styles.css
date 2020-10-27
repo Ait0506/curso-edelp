@@ -26,7 +26,7 @@ a {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body img {
@@ -128,7 +128,7 @@ body .header-sitio .contenido-header .nav-header .enlaces-navegacion a:last-of-t
 }
 
 body .header-sitio .contenido-header .nav-header .enlaces-navegacion a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -136,8 +136,8 @@ body .header-sitio .contenido-header .nav-header .enlaces-navegacion a::after {
   width: 0;
   background-color: #ededed;
   display: inline-block;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 body .header-sitio .contenido-header .nav-header .enlaces-navegacion a:hover::after {
@@ -194,7 +194,7 @@ body .hero .slider .slide p {
     font-size: 2rem;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.4);
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -205,4 +205,34 @@ body .hero .slider .slide img {
   height: 100%;
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
+}
+
+body .main-sitio {
+  margin-top: 50px;
+}
+
+body .main-sitio .contenedor-acerca {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+body .main-sitio .contenedor-acerca .item-acerca {
+  text-align: center;
+}
+
+body .main-sitio .contenedor-acerca .item-acerca i {
+  font-size: 1.2rem;
+}
+
+body .main-sitio .contenedor-acerca .item-acerca h3 {
+  color: #de1d22;
+  margin: 15px 0 15px 0;
+}
+
+body .main-sitio .contenedor-acerca .item-acerca p {
+  line-height: 1.5;
 }
