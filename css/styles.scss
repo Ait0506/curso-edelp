@@ -19,6 +19,27 @@ html {
   margin: 0;
 }
 
+//Estilos Scroolbar
+/* ancho */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* color de fondo */
+::-webkit-scrollbar-track {
+  background: $blanco;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $negro;
+}
+
 .contenedor {
   max-width: 80%;
   margin: 0 auto;
@@ -188,91 +209,91 @@ body {
   .main-sitio {
     margin-top: 50px;
     .contenedor-acerca {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        column-gap: 50px;
-        row-gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 50px;
+      row-gap: 30px;
 
-        @media (min-width: 680px) {
-          grid-template-columns: repeat(2, 1fr);
+      @media (min-width: 680px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 1120px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .item-acerca {
+        text-align: center;
+        padding: 15px;
+        position: relative;
+        cursor: pointer;
+
+        .lado {
+          position: absolute;
+          display: inline-block;
+          background-color: $rojo;
+          transition: all 0.5s ease;
         }
 
-        @media (min-width: 1120px) {
-          grid-template-columns: repeat(4, 1fr);
+        .l1 {
+          top: 0;
+          left: 0;
+          height: 0;
+          width: 3px;
         }
 
-        .item-acerca {
-            text-align: center;
-            padding: 15px;
-            position: relative;
-            cursor: pointer;
-
-            .lado {
-              position: absolute;
-              display: inline-block;
-              background-color: $rojo;
-              transition: all .5s ease;
-            }
-
-            .l1 {
-              top: 0;
-              left: 0;
-              height: 0;
-              width: 3px;
-            }
-
-            .l2 {
-              bottom: 0;
-              left: 0;
-              height: 3px;
-              width: 0;
-            }
-
-            .l3 {
-              bottom: 0;
-              right: 0;
-              height: 0;
-              width: 3px;
-            }
-
-            .l4 {
-              top: 0;
-              left: 0;
-              height: 3px;
-              width: 0;
-            }
-
-            &:hover {
-              .l1 {
-                height: 100%;
-              }
-
-              .l2 {
-                width: 100%;
-              }
-
-              .l3 {
-                height: 100%;
-              }
-
-              .l4 {
-                width: 100%;
-              }
-            }
-
-            i {
-                font-size: 1.2rem;
-            }
-
-            h3 {
-                color: $rojo;
-                margin: 15px 0 15px 0;
-            }
-
-            p {
-                line-height: 1.5;
-            }
+        .l2 {
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          width: 0;
         }
+
+        .l3 {
+          bottom: 0;
+          right: 0;
+          height: 0;
+          width: 3px;
+        }
+
+        .l4 {
+          top: 0;
+          left: 0;
+          height: 3px;
+          width: 0;
+        }
+
+        &:hover {
+          .l1 {
+            height: 100%;
+          }
+
+          .l2 {
+            width: 100%;
+          }
+
+          .l3 {
+            height: 100%;
+          }
+
+          .l4 {
+            width: 100%;
+          }
+        }
+
+        i {
+          font-size: 1.2rem;
+        }
+
+        h3 {
+          color: $rojo;
+          margin: 15px 0 15px 0;
+        }
+
+        p {
+          line-height: 1.5;
+        }
+      }
     }
   }
 
@@ -301,7 +322,7 @@ body {
           display: block;
           text-align: left;
           margin-bottom: 10px;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
 
           &:hover {
             color: $rojo;
