@@ -6,7 +6,7 @@
 !(function($) {
   "use strict";
 
-  $('form.php-email-form').submit(function(e) {
+  /*$('form.php-email-form').submit(function(e) {
     e.preventDefault();
     
     var f = $(this).find('.form-group'),
@@ -121,7 +121,7 @@
     }
     
     return true;
-  });
+  });*/
 
   function php_email_form_submit(this_form, action, data) {
     $.ajax({
